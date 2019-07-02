@@ -51,10 +51,11 @@ class DebugToolbar implements FilterInterface
 	 * We don't need to do anything here.
 	 *
 	 * @param RequestInterface|\CodeIgniter\HTTP\IncomingRequest $request
+	 * @param ResponseInterface|\CodeIgniter\HTTP\Response       $response
 	 *
 	 * @return void
 	 */
-	public function before(RequestInterface $request)
+	public function before(RequestInterface $request, ResponseInterface $response)
 	{
 	}
 

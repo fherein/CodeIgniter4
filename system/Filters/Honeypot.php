@@ -53,12 +53,13 @@ class Honeypot implements FilterInterface
 	 * then the requester is a bot
 	 *
 	 * @param \CodeIgniter\HTTP\RequestInterface $request
+	 * @param \CodeIgniter\HTTP\ResponseInterface $response
 	 *
 	 * @return void
 	 *
 	 * @throws \CodeIgniter\Honeypot\Exceptions\HoneypotException
 	 */
-	public function before(RequestInterface $request)
+	public function before(RequestInterface $request, ResponseInterface $response)
 	{
 		$honeypot = Services::honeypot(new \Config\Honeypot());
 		if ($honeypot->hasContent($request))

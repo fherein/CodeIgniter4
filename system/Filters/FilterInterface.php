@@ -58,10 +58,11 @@ interface FilterInterface
 	 * redirects, etc.
 	 *
 	 * @param \CodeIgniter\HTTP\RequestInterface $request
+	 * @param \CodeIgniter\HTTP\ResponseInterface $response
 	 *
 	 * @return mixed
 	 */
-	public function before(RequestInterface $request);
+	public function before(RequestInterface $request, ResponseInterface $response);
 
 	//--------------------------------------------------------------------
 

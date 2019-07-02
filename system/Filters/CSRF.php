@@ -67,10 +67,11 @@ class CSRF implements FilterInterface
 	 * redirects, etc.
 	 *
 	 * @param RequestInterface|\CodeIgniter\HTTP\IncomingRequest $request
+	 * @param ResponseInterface|\CodeIgniter\HTTP\Response       $response
 	 *
 	 * @return mixed
 	 */
-	public function before(RequestInterface $request)
+	public function before(RequestInterface $request, ResponseInterface $response)
 	{
 		if ($request->isCLI())
 		{
